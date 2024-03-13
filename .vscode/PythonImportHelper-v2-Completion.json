@@ -1,0 +1,127 @@
+[
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Rider",
+        "importPath": "src.rider",
+        "description": "src.rider",
+        "isExtraImport": true,
+        "detail": "src.rider",
+        "documentation": {}
+    },
+    {
+        "label": "Rider",
+        "importPath": "src.rider",
+        "description": "src.rider",
+        "isExtraImport": true,
+        "detail": "src.rider",
+        "documentation": {}
+    },
+    {
+        "label": "Driver",
+        "importPath": "src.driver",
+        "description": "src.driver",
+        "isExtraImport": true,
+        "detail": "src.driver",
+        "documentation": {}
+    },
+    {
+        "label": "Driver",
+        "importPath": "src.driver",
+        "description": "src.driver",
+        "isExtraImport": true,
+        "detail": "src.driver",
+        "documentation": {}
+    },
+    {
+        "label": "Driver",
+        "importPath": "src.driver",
+        "description": "src.driver",
+        "isExtraImport": true,
+        "detail": "src.driver",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "argv",
+        "importPath": "sys",
+        "description": "sys",
+        "isExtraImport": true,
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Ride",
+        "importPath": "src.ride",
+        "description": "src.ride",
+        "isExtraImport": true,
+        "detail": "src.ride",
+        "documentation": {}
+    },
+    {
+        "label": "Driver",
+        "kind": 6,
+        "importPath": "ride-sharing.src.driver",
+        "description": "ride-sharing.src.driver",
+        "peekOfCode": "class Driver:\n    def __init__(self):\n        self.drivers = defaultdict(dict)\n        self.occupiedDrivers = defaultdict()\n    def addDriver(self, id, xPos, yPos):\n        if id in self.drivers:\n            return f\"Driver already added.\"\n        self.drivers[id] = {'xPos': xPos, 'yPos': yPos}\n        return f'Driver added.'\n    def getDrivers(self):",
+        "detail": "ride-sharing.src.driver",
+        "documentation": {}
+    },
+    {
+        "label": "Ride",
+        "kind": 6,
+        "importPath": "ride-sharing.src.ride",
+        "description": "ride-sharing.src.ride",
+        "peekOfCode": "class Ride:\n    def __init__(self, riderInstance, driverInstance):\n        self.pendingRides = defaultdict(list)\n        self.completedRides = defaultdict(list)\n        # self.occupiedDrivers = defaultdict(dict)\n        self.riders = riderInstance\n        self.drivers = driverInstance\n    def startRide(self, rideId, n, riderId):\n        availDrivers = self.riders.getAvailableDrivers(riderId)\n        if len(availDrivers)<n or availDrivers[n-1] in self.drivers.getOccupiedDrivers():",
+        "detail": "ride-sharing.src.ride",
+        "documentation": {}
+    },
+    {
+        "label": "Rider",
+        "kind": 6,
+        "importPath": "ride-sharing.src.rider",
+        "description": "ride-sharing.src.rider",
+        "peekOfCode": "class Rider:\n    def __init__(self, driverInstance):\n        self.riders = defaultdict(dict)\n        self.drivers = driverInstance\n    def addRider(self, id, xPos, yPos):\n        if id in self.riders:\n            return f'Rider already exists.'\n        self.riders[id] = {'xPos':xPos, 'yPos':yPos}\n        return f'Rider added.'\n    def matchToDriver(self, riderId):",
+        "detail": "ride-sharing.src.rider",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ride-sharing.geektrust",
+        "description": "ride-sharing.geektrust",
+        "peekOfCode": "def main():    \n    inputs = [[\n        'ADD_DRIVER D1 1 1',\n        'ADD_DRIVER D2 4 5',\n        'ADD_DRIVER D3 2 2',\n        'ADD_RIDER R1 0 0',\n        'MATCH R1',\n        'START_RIDE RIDE-001 2 R1',\n        'STOP_RIDE RIDE-001 4 5 32',\n        'BILL RIDE-001'",
+        "detail": "ride-sharing.geektrust",
+        "documentation": {}
+    }
+]
